@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Squircle.Sample", "Squircle.Sample\Squircle.Sample.csproj", "{17F9FB9C-E9B0-4484-9B6D-8499E5C785C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Squircle", "Squircle\Squircle.csproj", "{A4782AEF-70D7-4243-9FB0-7BA85B4A7993}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17F9FB9C-E9B0-4484-9B6D-8499E5C785C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17F9FB9C-E9B0-4484-9B6D-8499E5C785C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17F9FB9C-E9B0-4484-9B6D-8499E5C785C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17F9FB9C-E9B0-4484-9B6D-8499E5C785C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4782AEF-70D7-4243-9FB0-7BA85B4A7993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4782AEF-70D7-4243-9FB0-7BA85B4A7993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4782AEF-70D7-4243-9FB0-7BA85B4A7993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4782AEF-70D7-4243-9FB0-7BA85B4A7993}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3944DC43-2852-4893-97C3-CEDB0F9806AD}
+	EndGlobalSection
+EndGlobal
