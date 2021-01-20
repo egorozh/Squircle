@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:squircle="clr-namespace:Squircle;assembly=Squircle"
+        xmlns:sample="clr-namespace:Sample"
 
         mc:Ignorable="d"
 
@@ -11,6 +12,7 @@
 
         Height="720" Width="620"
         WindowStartupLocation="CenterScreen">
+
     <Window.Resources>
         <SolidColorBrush x:Key="Button.Static.Background" Color="#00AABB" />
         <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070" />
@@ -80,20 +82,49 @@
         <TabItem Header="Select Curvature">
 
             <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Curvature: " />
+                    <TextBlock Text="{Binding Value,ElementName=Slider}" />
+                </StackPanel>
+
                 <Slider Minimum="0"
                         Maximum="1"
                         x:Name="Slider"
                         Value="0.5" />
                 <squircle:Squircle Background="MediumVioletRed"
+                                   BorderThickness="10"
+                                   BorderBrush="DeepSkyBlue"
                                    VerticalAlignment="Stretch"
                                    Curvature="{Binding Value,ElementName=Slider}"
                                    Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
-                                   Margin="10">
+                                   Margin="10"
+                                   Padding="50">
                     <TextBlock Background="Pink"
-                               Margin="50"
                                Text="Content"
                                TextAlignment="Center" />
                 </squircle:Squircle>
+            </StackPanel>
+        </TabItem>
+
+        <TabItem Header="Select Border Corners">
+
+            <StackPanel>
+                <Slider Minimum="0"
+                        Maximum="1000"
+                        x:Name="Slider2"
+                        Value="0" />
+                <Border Background="MediumVioletRed"
+                        BorderThickness="5"
+                        BorderBrush="DeepSkyBlue"
+                        VerticalAlignment="Stretch"
+                        CornerRadius="{Binding Value,ElementName=Slider2, Converter={sample:DoubleToCornerRadiusConverter}}"
+                        Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                        Margin="10"
+                        Padding="50">
+                    <TextBlock Background="Pink"
+                               Text="Content"
+                               TextAlignment="Center" />
+                </Border>
             </StackPanel>
         </TabItem>
 
