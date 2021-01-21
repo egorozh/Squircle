@@ -4,7 +4,7 @@ using System.Windows.Media;
 
 namespace Squircle.Helpers
 {
-    internal static class SquirclePathGenerator
+    public static class SquirclePathGenerator
     {
         public static PathGeometry GetGeometry(double w = 100, double h = 100, double curvature = 1)
         {
