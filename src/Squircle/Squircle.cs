@@ -45,22 +45,16 @@ namespace Squircle
 
         private static bool IsBorderThicknessValid(object value)
         {
-            double t = (double) value;
+            if (value is double borderThickness)
+                return borderThickness >= 0;
 
-            return true;
+            return false;
         }
 
         private static void OnClearPenCache(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             Squircle border = (Squircle) d;
             border._penCache = null;
-        }
-
-        private static bool IsThicknessValid(object value)
-        {
-            Thickness t = (Thickness) value;
-
-            return true;
         }
 
         /// <summary>
@@ -73,13 +67,19 @@ namespace Squircle
                     FrameworkPropertyMetadataOptions.AffectsMeasure | FrameworkPropertyMetadataOptions.AffectsRender),
                 IsThicknessValid);
 
+        private static bool IsThicknessValid(object value)
+        {
+            Thickness t = (Thickness) value;
+
+            return true;
+        }
+
         /// <summary>
         /// DependencyProperty for <see cref="BorderBrush" /> property.
         /// </summary>
         public static readonly DependencyProperty BorderBrushProperty
             = DependencyProperty.Register("BorderBrush", typeof(Brush), typeof(Squircle),
-                new FrameworkPropertyMetadata(
-                    (Brush) null,
+                new FrameworkPropertyMetadata(default(Brush),
                     FrameworkPropertyMetadataOptions.AffectsRender |
                     FrameworkPropertyMetadataOptions.SubPropertiesDoNotAffectRender,
                     OnClearPenCache));
@@ -89,8 +89,7 @@ namespace Squircle
         /// </summary>
         public static readonly DependencyProperty BackgroundProperty =
             Panel.BackgroundProperty.AddOwner(typeof(Squircle),
-                new FrameworkPropertyMetadata(
-                    (Brush) null,
+                new FrameworkPropertyMetadata(default(Brush),
                     FrameworkPropertyMetadataOptions.AffectsRender |
                     FrameworkPropertyMetadataOptions.SubPropertiesDoNotAffectRender));
 
@@ -215,7 +214,8 @@ namespace Squircle
                     pen = new Pen
                     {
                         Brush = BorderBrush,
-                        Thickness = BorderThickness
+                        Thickness = BorderThickness,
+                        LineJoin = PenLineJoin.Round
                     };
 
                     if (BorderBrush.IsFrozen)

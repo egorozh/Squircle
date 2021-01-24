@@ -91,12 +91,12 @@
                         Maximum="1"
                         x:Name="Slider"
                         Value="0.5" />
+
                 <squircle:Squircle Background="MediumVioletRed"
                                    BorderThickness="10"
                                    BorderBrush="DeepSkyBlue"
                                    VerticalAlignment="Stretch"
                                    Curvature="{Binding Value,ElementName=Slider}"
-                                   Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                                    Margin="10"
                                    Padding="50">
                     <TextBlock Background="Pink"
