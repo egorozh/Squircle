@@ -1,29 +1,28 @@
-using System;
+﻿using System;
 using System.Globalization;
 using System.Text;
-using System.Windows.Media;
 
-namespace Squircle.Helpers
+namespace Squircle
 {
-    public static class SquirclePathGenerator
+    public static class SquircleGenerator
     {
-        public static PathGeometry GetGeometry(double width = 100, double height = 100, double curvature = 1)
+        public static string GetGeometry(double width = 100, double height = 100, double curvature = 1)
         {
             StringBuilder path = new();
-            
+
             var halfHeight = height / 2;
             var halfWidth = width / 2;
 
             var arc = Math.Min(halfWidth, halfHeight) * (1 - curvature);
-            
+
             path.Append(GetStartPoint(0, halfHeight))
                 .Append(GetBezierSegment(0, arc, arc, 0, halfWidth, 0))
                 .Append(GetShortBezierSegment(width, arc, width, halfHeight))
-                .Append(GetShortBezierSegment(width-arc, height, halfWidth, height))
-                .Append(GetShortBezierSegment(0, height-arc, 0, halfHeight))
+                .Append(GetShortBezierSegment(width - arc, height, halfWidth, height))
+                .Append(GetShortBezierSegment(0, height - arc, 0, halfHeight))
                 .Append(" Z");
-            
-            return PathGeometry.CreateFromGeometry(Geometry.Parse(path.ToString())); 
+
+            return path.ToString();
         }
 
         private static string GetStartPoint(double x, double y)

@@ -1,10 +1,10 @@
-using Squircle.Helpers;
 using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using Squircle.WPF.Helpers;
 
-namespace Squircle
+namespace Squircle.WPF
 {
     /// <summary>
     /// Squircle Decorator

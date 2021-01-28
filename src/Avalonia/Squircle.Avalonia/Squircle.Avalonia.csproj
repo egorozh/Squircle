@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0;net5.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+
+    <Authors>egorozh</Authors>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/egorozh/Squircle</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/egorozh/Squircle</RepositoryUrl>
+    <PackageTags>Squircle, Border, Decorator, Avalonia, AvaloniaUI</PackageTags>
+    <Description>Squircle decorator for Avalonia</Description>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+
+    <AssemblyVersion>0.10.0</AssemblyVersion>
+    <FileVersion>0.10.0</FileVersion>
+    <Version>0.10.0</Version>
+
+    <PackageIcon>icon.png</PackageIcon>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Squircle\Squircle.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\images\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:avalonia="clr-namespace:Squircle.Avalonia;assembly=Squircle.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Squircle.Avalonia.Sample.MainWindow"
+        Title="Squircle.Avalonia.Sample">
+
+    <StackPanel>
+      <StackPanel Orientation="Horizontal">
+          <TextBlock Text="Curvature: " />
+          <TextBlock Text="{Binding Value,ElementName=Slider}" />
+      </StackPanel>
+
+      <Slider Minimum="0"
+              Maximum="1"
+              x:Name="Slider"
+              Value="0.5" />
+
+      <avalonia:Squircle Background="MediumVioletRed"
+                         BorderThickness="10"
+                         BorderBrush="DeepSkyBlue"
+                         VerticalAlignment="Stretch"
+                         Curvature="{Binding Value,ElementName=Slider}"
+                         Margin="10"
+                         Padding="50">
+          <TextBlock Background="Pink"
+                     Text="Content"
+                     TextAlignment="Center" />
+      </avalonia:Squircle>
+  </StackPanel>
+
+</Window>

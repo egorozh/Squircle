@@ -1,4 +1,4 @@
-namespace Squircle.Helpers
+namespace Squircle.WPF.Helpers
 {
     internal static class DoubleUtil
     {

@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Squircle\Squircle.csproj" />
+    <ProjectReference Include="..\Squircle.WPF\Squircle.WPF.csproj" />
   </ItemGroup>
 
 </Project>

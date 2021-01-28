@@ -3,9 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Squircle.Sample", "Squircle.Sample\Squircle.Sample.csproj", "{17F9FB9C-E9B0-4484-9B6D-8499E5C785C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Squircle.WPF.Sample", "WPF\Squircle.WPF.Sample\Squircle.WPF.Sample.csproj", "{17F9FB9C-E9B0-4484-9B6D-8499E5C785C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Squircle", "Squircle\Squircle.csproj", "{A4782AEF-70D7-4243-9FB0-7BA85B4A7993}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Squircle.WPF", "WPF\Squircle.WPF\Squircle.WPF.csproj", "{A4782AEF-70D7-4243-9FB0-7BA85B4A7993}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Avalonia", "Avalonia", "{EB6A2989-A698-4EDD-8835-CDFCC9C3DF0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Squircle.Avalonia.Sample", "Avalonia\Squircle.Avalonia.Sample\Squircle.Avalonia.Sample.csproj", "{FD6438DD-259C-4A42-A82A-168F92AA7036}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Squircle.Avalonia", "Avalonia\Squircle.Avalonia\Squircle.Avalonia.csproj", "{C02F2E18-0618-4D0C-9164-B72F7E57217F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{D9B820B2-3ABD-479A-B927-67590E9EA43D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{C48E517B-FCC0-43A0-8BAF-7F9DBAB1C190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Squircle", "Shared\Squircle\Squircle.csproj", "{B65E0C35-BABC-4BF8-AA57-687461F0ED4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +33,28 @@ Global
 		{A4782AEF-70D7-4243-9FB0-7BA85B4A7993}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4782AEF-70D7-4243-9FB0-7BA85B4A7993}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4782AEF-70D7-4243-9FB0-7BA85B4A7993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD6438DD-259C-4A42-A82A-168F92AA7036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD6438DD-259C-4A42-A82A-168F92AA7036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD6438DD-259C-4A42-A82A-168F92AA7036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD6438DD-259C-4A42-A82A-168F92AA7036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C02F2E18-0618-4D0C-9164-B72F7E57217F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C02F2E18-0618-4D0C-9164-B72F7E57217F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C02F2E18-0618-4D0C-9164-B72F7E57217F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C02F2E18-0618-4D0C-9164-B72F7E57217F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B65E0C35-BABC-4BF8-AA57-687461F0ED4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B65E0C35-BABC-4BF8-AA57-687461F0ED4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B65E0C35-BABC-4BF8-AA57-687461F0ED4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B65E0C35-BABC-4BF8-AA57-687461F0ED4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17F9FB9C-E9B0-4484-9B6D-8499E5C785C9} = {C48E517B-FCC0-43A0-8BAF-7F9DBAB1C190}
+		{A4782AEF-70D7-4243-9FB0-7BA85B4A7993} = {C48E517B-FCC0-43A0-8BAF-7F9DBAB1C190}
+		{FD6438DD-259C-4A42-A82A-168F92AA7036} = {EB6A2989-A698-4EDD-8835-CDFCC9C3DF0A}
+		{C02F2E18-0618-4D0C-9164-B72F7E57217F} = {EB6A2989-A698-4EDD-8835-CDFCC9C3DF0A}
+		{B65E0C35-BABC-4BF8-AA57-687461F0ED4A} = {D9B820B2-3ABD-479A-B927-67590E9EA43D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3944DC43-2852-4893-97C3-CEDB0F9806AD}
